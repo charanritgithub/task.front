@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
+import api from '../api'
 import TaskList from '../components/TaskList';
 
 const Home = () => {
@@ -12,8 +14,8 @@ const Home = () => {
   }, [filter]);
 
   const fetchTasks = async () => {
-    try {
-      let url = '/api/tasks';
+  try {
+    let url = `${API_BASE_URL}/api/tasks`;
       if (filter !== 'all') {
         url += `?status=${filter}`;
       }
