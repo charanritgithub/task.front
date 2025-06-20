@@ -9,10 +9,14 @@
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "https://your-backend-url.vercel.app/api/$1"
+      "src": "/api/(.*)",
+      "dest": "task-back-gpgjxzd5u-sai-charans-projects-26f7a045.vercel.app"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
